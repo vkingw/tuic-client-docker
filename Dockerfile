@@ -14,7 +14,7 @@ RUN if [ "${TARGETPLATFORM}" = "linux/386" ]; then export TARGET=i686-linux-musl
     && if [ "${TARGETPLATFORM}" = "linux/amd64" ]; then export TARGET=x86_64-linux-musl ; fi  \
     && if [ "${TARGETPLATFORM}" = "linux/arm/v7" ]; then export TARGET=armv7-linux-musleabihf ; fi  \
     && if [ "${TARGETPLATFORM}" = "linux/arm64" ]; then export TARGET=aarch64-linux-musl ; fi  \
-    && wget -O $SAVE_PATH https://github.com/EAimTY/tuic/releases/download/${VERSION}/tuic-client-${VERSION}-${TARGET} \
+    && wget -O $SAVE_PATH https://github.com/EAimTY/tuic/releases/download/${VERSION}/${VERSION}-${TARGET} \
     && chmod +x $SAVE_PATH
 
 COPY config.json /etc/tuic/
