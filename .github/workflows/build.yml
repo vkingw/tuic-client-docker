@@ -11,7 +11,7 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
-            version: tuic-client-1.0.0
+            version: 1.0.0
 
     runs-on: ${{ matrix.os }}
 
