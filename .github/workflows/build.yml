@@ -44,5 +44,5 @@ jobs:
           build-args: |
             VERSION=${{ matrix.version }}
           tags: |
-            kilvn/tuic-client:latest
-            kilvn/tuic-client:${{ matrix.version }}
+            vincentking/tuic-client:latest
+            vincentking/tuic-client:${{ matrix.version }}
