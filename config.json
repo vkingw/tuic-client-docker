@@ -1,20 +1,29 @@
 {
     "relay": {
-        "server": "SERVER",
-        "port": 443,
-        "token": "TOKEN",
+        "server": "example.com:443",
+        "uuid": "00000000-0000-0000-0000-000000000000",
+        "password": "PASSWORD",
+        "ip": "127.0.0.1",
+        "certificates": ["PATH/TO/CERTIFICATE_1", "PATH/TO/CERTIFICATE_2"],
         "udp_relay_mode": "native",
-        "congestion_controller": "bbr",
-        "alpn": ["h3"],
+        "congestion_control": "cubic",
+        "alpn": ["h3", "spdy/3.1"],
+        "zero_rtt_handshake": false,
         "disable_sni": false,
-        "reduce_rtt": false,
-        "max_udp_relay_packet_size": 1500
+        "timeout": "8s",
+        "heartbeat": "3s",
+        "disable_native_certs": false,
+        "send_window": 16777216,
+        "receive_window": 8388608,
+        "gc_interval": "3s",
+        "gc_lifetime": "15s"
     },
     "local": {
-        "port": 4080,
-        "ip": "127.0.0.1",
-        "username": "SOCKS5_USERNAME",
-        "password": "SOCKS5_PASSWORD"
+        "server": "[::]:1080",
+        "username": "USERNAME",
+        "password": "PASSWORD",
+        "dual_stack": true,
+        "max_packet_size": 1500
     },
-    "log_level": "info"
+    "log_level": "warn"
 }
